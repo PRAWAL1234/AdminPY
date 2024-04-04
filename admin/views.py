@@ -19,7 +19,7 @@ def Home(req):
     context={
         'img':img
     }
-    return render(req,'home.html',context)
+    return render(req,'index.html',context)
 
 def academics(req):
     subject=subjects.objects.all()
