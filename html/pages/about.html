@@ -1,0 +1,81 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+About
+{%endblock%}
+{%block 'css'%}
+<link rel="stylesheet" href="/static/css/pages/about.css">
+{%endblock%}
+{%block 'html'%}
+<div data-aos="fade-up" data-aos-duration="2000" class="flex flex-col items-center py-20 gap-8" id="main-div1">
+    <h1 class="text-7xl font-bold">OUR SCHOOL</h1>
+    <p class="text-center text-slate-400 tracking-tight text-lg font-thin">I'm a paragraph. Click here to add your own text and edit me.<br> It’s easy. Just click “Edit Text” or double click me to add your own <br>content and make changes to the font. </p>
+</div>
+<div class="flex px-36 py-16 flex-col" id="main-div2">
+    <div class="flex" id="principal">
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" style="width: 650px;" id="img1">
+            <img src="/static/images/2e2a49_d4fcf8dd8ce44a5ba1e1b9d034d8a43e~mv2.webp" alt="">
+        </div>
+        <div class="bg-slate-800 flex flex-col items-center justify-center gap-10 py-20" style="width: 650px;" id="text-box1">
+            <h1 data-aos="fade-up"
+                data-aos-duration="1500" 
+                class="text-indigo-500 text-4xl">Principal's Message</h1>
+            <p 
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="text-slate-200 text-lg font-thin ">I'm a paragraph. Click here to add your own<br> text and edit me. It’s easy. Just click “Edit Text” or<br> double click me to add your own content and <br>make changes to the font.
+             <br>   
+             <br>   
+             <br>   
+                This is a great space to write a long text about<br> your company and your services. You can use <br>this space to go into a little more detail about<br> your own company.
+            </p>
+        </div>
+    </div>
+    <div class="flex" id="values">
+        
+        <div class="bg-slate-800 flex flex-col items-center justify-center gap-10 py-20" style="width: 650px;" id="text-box2">
+            <h1
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="text-indigo-500 text-4xl">Vission & Values</h1>
+            <ul
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            class="text-white font-bold text-2xl">
+                <li class="list-disc">Be Kind</li>
+                <li class="list-disc">Be Respectful</li>
+                <li class="list-disc">Be Responsible</li>
+                <li class="list-disc">Work Hard</li>
+                <li class="list-disc">Have Fun</li>
+            </ul>
+        </div>
+        <div data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-offset="0" style="width: 650px;" id="img2">
+            <img src="/static/images/2e2a49_0e7c5dac31934b1d8c9edc0aeb636dfb~mv2.webp" alt="">
+        </div>
+    </div>
+</div>
+<div data-aos="fade-up" data-aos-duration="2000" class="flex flex-col items-center py-20 gap-8" id="main-div1">
+    <h1 class="text-7xl font-bold">STAFF DIRECTORY</h1>
+    <p class="text-center text-slate-400 tracking-tight text-lg font-thin">I'm a paragraph. Click here to add your own text and edit me.<br> It’s easy. Just click “Edit Text” or double click me to add your own <br>content and make changes to the font. </p>
+</div>
+<div class=" text-slate-400 flex  p-20 box-border gap-16 flex-wrap  items-start justify-center">
+    {%for i in teachers%}
+    <div class="flex flex-col gap-10 w-56 items-center justify-center">
+        <ul class="flex flex-col text-center">
+            <h4 class="text-2xl text-slate-900">{{i.teacher_name}}</h4>
+            <li class="text-lg font-extralight">{{i.position}}</li>
+            
+        </ul>
+        <ol class="flex flex-col text-center">
+            <li>{{i.email}}</li>
+            <li>{{i.mobile_number}}</li>
+        </ol>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}

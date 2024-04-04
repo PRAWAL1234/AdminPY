@@ -1,0 +1,33 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+{{festival.events_name}}
+{%endblock%}
+{%block 'css'%}
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+
+{%endblock%}
+{%block 'html'%}
+<div class="flex bg-indigo-50 gap-10 py-20 px-10 flex-col justify-center items-center">
+    <h3 class="text-indigo-500 text-base sm:text-lg text-center">{{festival.created_date}} | Ridgeview Middle School</h3>
+    <h1 class="text-3xl sm:text-7xl text-indigo-500 font-semibold">{{festival.events_name}}</h1>
+    <p class="w-full sm:w-96 leading-tighter text-center font-thin text-indigo-500">{{festival.about}}</p>
+</div>
+<div class="flex flex-col p-10 gap-10">
+    <div class=" flex flex-col items-center gap-3">
+        <h1 class="text-indigo-500 text-4xl font-semibold">Time & Location</h1>
+        <h3 class="text-indigo-500 font-thin">{{festival.created_time}}</h3>
+        <h4 class="text-indigo-500 font-thin">{{festival.location}}</h4>
+    </div>
+    <div class=" flex flex-col items-center gap-5">
+        <h1 class="text-4xl font-semibold text-indigo-500">About the Event</h1>
+        <p class="w-full sm:w-96 leading-tighter text-center text-indigo-500">{{festival.about}}</p>
+    </div>
+</div>
+<div class="flex items-center justify-center p-10">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.9259293988057!2d77.27721377495676!3d28.631981984106584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfcac8908e1cb%3A0xf1136e9be542a930!2sMdu%20University%20Rohtak!5e0!3m2!1sen!2sin!4v1710144108107!5m2!1sen!2sin" width="800" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+
+{%endblock%}

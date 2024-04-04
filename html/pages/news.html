@@ -1,0 +1,49 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+News
+{%endblock%}
+{%block 'css'%}
+<link rel="stylesheet" href="/static/css/pages/news.css">
+{%endblock%}
+{%block 'html'%}
+<div class="flex justify-center py-20">
+    <h1 data-aos="fade-up"
+    data-aos-anchor-placement="bottom-bottom" class="text-2xl sm:text-7xl font-bold">LATEST NEWS</h1>
+</div>
+<div class=" p-20 items-center justify-center" id="main-div">
+    <div class="flex flex-col gap-10 bg-slate-800 p-10 items-center" id="child">
+        {%for i in news%}
+        <div class="flex bg-slate-50 xl:flex-row flex-col" style="width: 1100px;" id="box">
+            <div class="w-full" id="img">
+                <img src="{{i.image.url}}" alt="" class="w-full">
+            </div>
+            <div class="text-slate-500 w-full flex flex-col px-10 py-3 box-border justify-between gap-10" id="text-box">
+                <a href="/news/{{i.id}}" class="flex flex-col gap-5">
+                    <div class="w-full flex gap-3 flex-wrap sm:flex-nowrap">
+                        <img src="/static/images/user.png" alt="" class="w-12">
+                        <div class="text-sm">
+                            <p >{{i.user.username}}</p>
+                            <p>{{i.created_date}}</p>
+                        </div>
+                        <div class="self-start text-lg cursor-pointer">...</div>
+                    </div>
+                    <div class="flex flex-col gap-5 font-bold " id="child-text-box">
+                        <h1 class="text-3xl w-72 text-slate-800">{{i.news_title}}</h1>
+                        <p class="tracking-tight font-thin text-lg">Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading....</p>
+                    </div>
+                </a>
+                <div class=" ">
+                    <hr>
+                    <div class="flex justify-between items-center flex-wrap gap-5 sm:flex-nowrap">
+                        <h4 class="text-base flex gap-5 text-slate-400">0 Viwes <a href="">0 Comment</a></h4>
+                        <i class="fa-regular fa-heart fa-lg" style="color: #d40808;"></i>
+                    </div>
+
+                </div>
+                
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

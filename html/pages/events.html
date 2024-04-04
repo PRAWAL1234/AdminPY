@@ -1,0 +1,29 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+Ridgeview Events
+{%endblock%}
+{%block 'css'%}
+{%endblock%}
+{%block 'html'%}
+<div class="flex items-center justify-center py-20 px-5">
+    <h1
+    data-aos="fade-up"
+     data-aos-anchor-placement="bottom-bottom"
+     class="text-2xl sm:text-7xl font-semibold">SCHOOL EVENTS</h1>
+</div>
+<div class=" py-0 sm:py-10">
+    <div class="bg-slate-800 p-3 sm:p-20 ">
+        {%for i in ev%}
+        <div class="p-3 sm:px-10  bg-white box-border ">
+            <div class=" flex flex-col lg:flex-row py-5 sm:py-10 lg:py-16 gap-10  lg:justify-between items-start lg:items-center border-b-2 border-black">
+                <div>
+                    <h3 class="text-base sm:text-2xl text-indigo-500">{{i.created_date}}</h3>
+                    <h1 class="text-lg sm:text-5xl text-indigo-500">{{i.events_name}}/<span class="text-slate-500 text-xl">Rdigeview</span></h1>
+                </div>
+                <a href="/festival/{{i.id}}"><button class="bg-indigo-500 py-2 sm:py-3 text-white px-10">More Info</button></a>
+            </div>   
+        </div>
+        {%endfor%}
+    </div>
+</div>
+{%endblock%}

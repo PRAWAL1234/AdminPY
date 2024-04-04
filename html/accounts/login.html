@@ -1,0 +1,43 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+Login
+{%endblock%}
+{%block 'css'%}
+{%endblock%}
+{%block 'html'%}
+<div class="flex items-center justify-center py-20 px-10">
+    <div class="flex sm:shadow-2xl ">
+    <div class="bg-slate-800 hidden md:flex flex-col p-10 lg:p-20 items-center justify-center gap-10 ">
+        <p class="text-xl text-white">Login using social media to<br> get quick access</p>
+        <a href=""><button class="rounded-md px-5 lg:px-10 py-2 text-white bg-blue-700"><i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;Signin with facebook</button></a>
+        <a href=""><button class="rounded-md px-5 lg:px-10 py-2 text-white bg-blue-500"><i class="fa-brands fa-twitter"></i>&nbsp;&nbsp;Signin with twitter</button></a>
+        <a href=""><button class="rounded-md px-5 lg:px-10 py-2 text-white bg-red-500"><i class="fa-brands fa-google"></i>&nbsp;&nbsp;Signin with google</button></a>
+    </div>
+    <form action="" method="post" class="flex flex-col items-center p-5 sm:p-10 lg:p-16 shadow-2xl  gap-5 sm:gap-10">
+        {%csrf_token%}
+        {%include '../includes/alert.html'%}
+        <div class="flex flex-col items-center gap-5">
+            <h1 class="text-lg sm:text-2xl lg:text-4xl">Login to your account</h1>
+            <p class="text-sm lg:text-lg">Don't have account?<a href="/signup" class="text-blue-500">Sign up free</a></p>
+        </div>
+        <div class="flex flex-col gap-5 sm:gap-10 size-full sm:w-72 lg:w-80">
+            <input class="shadow-xl  py-3 px-5 rounded-lg" required type="text" name="username" placeholder="Username">
+            <input class="shadow-xl  py-3 px-5 rounded-lg" required type="password" name="password" placeholder="Passowrd">
+        </div>
+        <div class="flex justify-center sm:justify-between  flex-wrap sm:flex-nowrap gap-4 sm:gap-10 lg:gap-20">
+            <div>
+                <input type="checkbox" name="" id="" required>
+                Remember me
+            </div>
+            <a href="/forgot" class="text-blue-500">Forgot password?</a>
+        </div>
+        <a href=""><button class="bg-blue-500 text-white py-3 px-10 sm:px-16 lg:px-24 rounded-lg">Login with email</button></a>
+        <div class="md:hidden text-2xl flex gap-5">
+            <i class="fa-brands fa-facebook text-blue-700"></i>
+            <i class="fa-brands fa-twitter text-blue-500"></i>
+            <i class="fa-brands fa-google text-red-600"></i>
+        </div>
+    </form>
+    </div>
+</div>
+{%endblock%}

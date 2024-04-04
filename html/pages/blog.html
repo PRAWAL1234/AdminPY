@@ -1,0 +1,30 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+{{blog.news_title}}
+{%endblock%}
+{%block 'css'%}
+{%endblock%}
+{%block 'html'%}
+<div class="p-7 sm:p-20 flex items-center justify-center">
+    <div class="border-black border-2 px-7 sm:px-20 py-10 flex flex-col gap-8" style="width: 850px;">
+        <div class="flex items-center justify-between gap-5 sm:flex-nowrap flex-wrap">
+            <div class="flex items-center gap-3 flex-wrap sm:flex-nowrap">
+                <img class="w-10" src="/static/images/user.png" alt="">
+                <p class="capitalize">{{blog.user.username}} <i class="fa-solid fa-crown"></i></p>
+                <p>{{blog.created_date}}</p>
+            </div>
+            <div>...</div>
+        </div>
+        <h1 class="text-4xl text-salte-800">{{blog.news_title}}</h1>
+        <p>Create a blog post subtitle that summarizes your post in a few short, punchy sentences and entices your audience to continue reading. </p>
+        <img src="{{blog.image.url}}" alt="">
+        <p>Welcome to your blog post. Use this space to connect with your readers and potential customers in a way that’s current and interesting. Think of it as an ongoing conversation where you can share updates about business, trends, news, and more.   </p>
+        <div class="px-10 border-l-4 border-indigo-500">
+            <p class="text-lg italic">Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.</p>
+        </div>
+        <p>You’ll be posting loads of engaging content, so be sure to keep your blog organized with Categories that also allow visitors to explore more of what interests them.</p>
+        <h2 class="text-lg font-semibold">Creative Relevant Content</h2>
+        <p >{{blog.blog}}</p>
+    </div>
+</div>
+{%endblock%}

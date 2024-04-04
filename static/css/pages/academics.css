@@ -1,0 +1,26 @@
+@media screen and (max-width:680px) {
+    #main-div1{
+        padding: 64px 20px;
+    }
+    #main-div1 h1{
+        font-size: 35px;
+    }
+    #main-div1 p{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:510px) {
+    #main-div1 p{
+        letter-spacing: 0px;
+        font-size: 12px;
+        width: 100% !important;
+    }
+}
+@media screen and (max-width:385px) {
+    #main-div2 #box1{
+        width: 100% !important;
+    }
+    #main-div2 #box2{
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,79 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+Contact us
+{%endblock%}
+{%block 'css'%}
+{%endblock%}
+{%block 'html'%}
+<div class="flex  flex-col items-center gap-5 py-20 px-5 sm:px-10">
+    <h1 data-aos="fade-up"
+     class="text-2xl sm:text-7xl font-bold">CONTACT US</h1>
+    <p data-aos="fade-up"
+      class="w-full sm:w-96 leading-7 text-center text-lg font-thin">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. </p>
+</div>
+<div class="flex flex-col p-0 py-10 sm:p-10 lg:p-20 ">
+    <div class="flex flex-col lg:flex-row ">
+        <div class=" w-full lg:w-1/2 bg-slate-800 flex flex-col items-center justify-center p-7  gap-10">
+           <div class="flex  flex-col items-center gap-5 ">
+            <h1 class="text-indigo-500 text-4xl">VISIT THE SCHOOL</h1>
+            <p class="text-white text-xl">under Safety Measures</p>
+           </div>
+            <div class="flex  flex-col items-center gap-5 ">
+                <h1 class="text-2xl text-white">ADDRESS</h1>
+                <p class="text-lg font-thin text-white">500 Terry Francisco Street <br>San Francisco,CA:94158</p>
+            </div>
+            <div class="flex  flex-col items-center gap-5 ">
+                <h1 class="text-2xl text-white">INFORMATION</h1>
+                <p class="text-white font-thin text-lg">For Information or quanestions</p>
+            </div>
+            <div class="flex  flex-col items-center gap-5 ">
+                <h1 class="text-2xl text-white">EMAIL US</h1>
+                <p class="text-white font-thin text-lg">info@mysite.com</p>
+            </div>
+            <div class="flex  flex-col items-center gap-5 ">
+                <h1 class="text-2xl text-white">CALL OUR MAINLINE</h1>
+                <p class="text-white font-thin text-lg">123-456-7890</p>
+            </div>
+        </div>
+        <img data-aos="fade-up"
+        data-aos-duration="1000" class=" w-full lg:w-1/2" src="/static/images/parents/2e2a49_04353c36eae2466ea8765b0b06a4b5d5~mv2.webp" alt="">
+    </div>
+    <div class="flex flex-col lg:flex-row-reverse ">
+        <div class="w-full lg:w-1/2  flex flex-col bg-slate-800 items-center justify-center  gap-5 p-10">
+            <H1 class="text-4xl text-indigo-500 text-center">You Can Also <br>Contact Us By Form</H1>
+            <form action="" method="post" class="flex flex-col gap-5">
+                <div class="w-full flex justify-between gap-5">
+                    <div class="flex flex-col text-white">
+                        <label for="">First Name</label>
+                        <input type="text" name="first_name" class="border-2 border-white bg-transparent" required>
+                    </div>
+                    <div class="flex flex-col text-white">
+                        <label for="">Last Name</label>
+                        <input type="text" name="last_name" class="border-2 border-white bg-transparent" required>
+                    </div>
+                </div>
+                <div class="w-full flex justify-between gap-5">
+                    <div class="flex flex-col text-white">
+                        <label for="">Email</label>
+                        <input type="email" name="email" class="border-2 border-white bg-transparent" required>
+                    </div>
+                    <div class="flex flex-col text-white">
+                        <label for="">Phone</label>
+                        <input type="number" name="phone" class="border-2 border-white bg-transparent" required>
+                    </div>
+                </div>
+                <div class="flex flex-col text-white">
+                    <label for="">Messages</label>
+                    <textarea name="textarea" id="" cols="30" rows="5" class="border-2 border-white bg-transparent" required></textarea>
+                </div>
+                <button type="submit" class="bg-indigo-500 text-white w-full py-2">Submit</button>
+            </form>
+        </div>
+        <div data-aos="fade-up"
+        data-aos-duration="1000" class="w-1/2 h-full ">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d403720.20187123487!2d-122.8944374!3d37.7650957!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1711622173526!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full"></iframe>
+        </div>
+
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,21 @@
+@media screen and (max-width:1280px) {
+    #box{
+        width: 100% !important;
+    }
+    #child-text-box h1{
+        width: 100% !important;
+    }
+}
+@media screen and (max-width:575px) {
+    #main-div{
+        padding: 10px;
+    }
+}
+@media screen and (max-width:385px) {
+    #child{
+        padding: 10px;
+    }
+    #text-box{
+        padding: 20px;
+    }
+}

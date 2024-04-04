@@ -1,0 +1,30 @@
+{%extends '../base.html'%}
+{%block 'title'%}
+{{subject.subject_name}}
+{%endblock%}
+{%block 'css'%}
+{%endblock%}
+{%block 'html'%}
+<div class="p-20 flex justify-center">
+    <h1 data-aos="fade-up"
+    data-aos-duration="1500" class="text-7xl font-semibold ">{{subject.subject_name}}</h1>
+</div>
+<div class="bg-indigo-500 flex items-center justify-center p-20  ">
+    <div class="flex flex-col items-center gap-20"> 
+        <div data-aos="zoom-in">
+            <img src="{{subject.images.url}}" alt="">
+        </div>
+    <p  data-aos="fade-up"
+    data-aos-duration="1500"
+    style="width: 70%;" class=" flex flex-col gap-10 text-center text-slate-200 tracking-tight text-lg font-thin">
+        {{subject.description}}
+    <br>  
+      This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are. 
+    <br>
+    At Wix we’re passionate about making templates that allow you to build fabulous websites and it’s all thanks to the support and feedback from users like you! Keep up to date with New Releases and what’s Coming Soon in Wix ellaneous in Support. Feel free to tell us what you think and give us feedback in the Wix Forum.
+    <br>
+    If you’d like to benefit from a professional designer’s touch, head to the Wix Arena and connect with one of our Wix Pro designers. Or if you need more help you can simply type your questions into the Support Forum and get instant answers. To keep up to date with everything Wix, including tips we think are cool, just head to the Wix Blog!
+    </p>
+    </div>
+</div>
+{%endblock%}

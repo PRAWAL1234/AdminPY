@@ -1,0 +1,147 @@
+{%extends './base.html'%}
+{%block 'title'%}
+Ridgeview
+{%endblock%}
+{%block 'css'%}
+<link rel="stylesheet" href="/static/css/home.css">
+{%endblock%}
+{%block 'html'%}
+{%include './includes/mssg.html'%}
+<div class="flex relative" id="main-div">
+    <div id="img" style="width: 100%; height: 100vh; background-image: url('/static/images/2e2a49_649ed07c96b8440ca201c9128c0898ae~mv2.webp');" class="bg-no-repeat bg-fixed">
+    </div>
+
+    <div data-aos="zoom-in">
+        <img src="/static/images/2e2a49_649ed07c96b8440ca201c9128c0898ae~mv2.webp" alt="" style="display: none;" id="img1">
+    </div>
+    
+    
+    <div data-aos="fade-down"
+    data-aos-duration="3000" class=" bg-indigo-500 text-white flex flex-col gap-6 lg:gap-10 px-16 py-20 absolute" style="width: 650px; top:20%; left:5%;" id="fade">
+        <h1 class="lg:text-7xl text-4xl font-bold">Back to School</h1>
+        <p class="lg:text-5xl text-xl">Welcome to all of <br>Our Students</p>
+        <a href="/about"><button class="bg-slate-900 border-2 border-indigo-500 px-5 py-3 md:text-lg text-base hover:border-slate-50 hover:bg-transparent hover:transition-all">Discover the School</button></a>
+    </div>
+</div>
+<div data-aos="fade-up"
+data-aos-duration="3000"class="py-16 px-0 flex justify-centers flex-col items-center gap-10" id="saftey">
+    <h1 class="text-lg sm:text-3xl lg:text-6xl font-bold font-sans text-slate-700">SAFETY MEASURES IN PLACE</h1>
+    <p class="text-center px-5 text-sm sm:text-base lg:text-xl font-thin">We do everything to ensure the health, safety and well-being of our<br> students and employees. Additional information can be found here</p>
+    <a href=""><button class="text-sm sm:text-lg border-2 border-white bg-indigo-500 px-12 py-3 text-white hover:bg-transparent hover:border-black hover:text-slate-500 hover:transition-all">Safety Measures</button></a>
+</div>
+
+<div class="flex flex-col items-center p-20" id="main-div-2">
+    <div class="flex" id="box1">
+        <div data-aos="fade-up"
+        data-aos-duration="2000">
+            <img src="/static/images/2e2a49_c8de1e6e955d459aa01defe9f5971dad~mv2.webp"  alt="">
+        </div>
+        <div  class="bg-slate-800 flex flex-col justify-center items-center gap-10" style="width: 645px;" id="life">
+            <h1 data-aos="fade-up"
+            data-aos-duration="2000" class="text-indigo-500 text-xl lg:text-5xl">Student Life</h1>
+
+            <p data-aos="fade-up"
+            data-aos-duration="2000" class="text-center text-slate-200 text-base lg:text-lg font-medium">I'm a paragraph. Click here to add<br> your own text and edit me. It’s easy.<br> Just click “Edit Text” or double click me<br> to add your own content and make<br> changes to the font. </p>
+
+            <a href="/student"><button data-aos="fade-up"
+                data-aos-duration="2000" class="text-base lg:text-lg  bg-indigo-500 px-12 py-3 text-white hover:bg-white  hover:text-black hover:transition-all">Student Information</button></a>
+        </div>
+    </div>
+    <div class="flex" id="box2">
+        
+        <div  class="bg-slate-800 flex flex-col  justify-center items-center gap-10" style="width: 645px;" id="open">
+
+            <h1 data-aos="fade-up"
+            data-aos-duration="2000" class="text-indigo-500 text-xl lg:text-5xl">Open Enrollment</h1>
+
+            <p data-aos="fade-up"
+            data-aos-duration="2000" class="text-center text-slate-200 text-base lg:text-lg font-medium">I'm a paragraph. Click here to add<br> your own text and edit me. It’s easy.<br> Just click “Edit Text” or double click me<br> to add your own content and make<br> changes to the font. </p>
+
+            <a href="/admission"><button data-aos="fade-up"
+            data-aos-duration="2000" class="text-sm lg:text-lg  bg-indigo-500 px-12 py-3 text-white hover:bg-white  hover:text-black hover:transition-all">Apply Today  </button></a>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="2000">
+            <img src="/static/images/2e2a49_aa886e73007945ad8869ba20d9771c41~mv2.webp" alt="">
+        </div>
+    </div>
+</div>
+<div class="flex flex-col items-center gap-20 p-10 sm:p-24" id="main-div-3">
+    <div data-aos="fade-up" data-aos-duration="2000">
+        <h1 class="text-2xl sm:text-6xl font-bold">LATEST NEWS</h1>
+    </div>
+    <div class="flex justify-center gap-5" id="news">
+        <a href="/news/1" data-aos="zoom-in" class="relative">
+            <img src="/static/images/2e2a49_aff1baf461024edca73e0e44d1b759c4~mv2.webp" alt="">
+            <div class="absolute top-0 justify-between flex flex-col px-7 py-10 sm:gap-0 gap-10" id="mar" style="background-color: rgba(0, 0, 0, 0.507); width: 100%; height: 100%;">
+                <div class="text-slate-100 font-sans">Mar 22,2023 * 1min</div>
+                <div class="flex flex-col gap-5" id="text">
+                    <h1 class="text-2xl text-slate-100 font-sans">Learning at Home <br>Effectively</h1>
+                    <hr>
+                    <div class="flex justify-between items-center">
+                        <i class="fa-regular fa-eye text-white"></i>
+                        <i class="fa-regular fa-heart fa-lg" style="color: #c82828;"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/news/2" data-aos="zoom-in" class="relative">
+            <img src="/static/images/2e2a49_2645b6d10a65444dbcf5bb29203b90b1~mv2.webp" alt="">
+            <div class="absolute top-0 justify-between flex flex-col px-7 py-10" id="mar" style="background-color: rgba(0, 0, 0, 0.507); width: 100%; height: 100%;">
+                <div class="text-slate-100 font-sans">Mar 22,2023 * 1min</div>
+                <div class="flex flex-col gap-5" id="text">
+                    <h1 class="text-2xl text-slate-100 font-sans">Get to Know Your <br>Teachers</h1>
+                    <hr>
+                    <div class="flex justify-between items-center">
+                        <i class="fa-regular fa-eye text-white"></i>
+                        <i class="fa-regular fa-heart fa-lg" style="color: #c82828;"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="/news/3" data-aos="zoom-in" class="relative">
+            <img src="/static/images/2e2a49_1ad13a5abd604cf7af35654a231cdbc7~mv2.webp" alt="">
+            <div class="absolute top-0 justify-between flex flex-col px-7 py-10" id="mar" style="background-color: rgba(0, 0, 0, 0.507); width: 100%; height: 100%;">
+                <div class="text-slate-100 font-sans">Mar 22,2023 * 1min</div>
+                <div class="flex flex-col gap-5" id="text">
+                    <h1 class="text-2xl text-slate-100 font-sans">The New Safty <br>Regulations</h1>
+                    <hr>
+                    <div class="flex justify-between items-center">
+                        <i class="fa-regular fa-eye text-white"></i>
+                        <i class="fa-regular fa-heart fa-lg" style="color: #c82828;"></i>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+    <a href="/news"data-aos="fade-up"
+    data-aos-duration="1000" ><button class="bg-slate-800 text-slate-100 px-12 py-3 border-2 border-white hover:bg-transparent hover:text-slate-800 hover:border-2 hover:border-slate-800 hover:transition-colors">Read All News</button></a>
+</div>
+
+<div class="bg-indigo-500 flex flex-col gap-20 items-center sm:p-24 p-10" id="main-div-4">
+    <div data-aos="fade-up" data-aos-duration="2000" class=" flex flex-col items-center gap-10" id="text1" style="width: 100%;">
+        <h1 class="text-3xl lg:text-7xl font-bold text-white">LIFE & CULTURE</h1>
+        <h2 class="text-lg sm:text-xl lg:text-5xl text-white">Follow <span class="text-black">#ridgeviewmiddleschool</span>On Instagram</h2>
+    </div>
+    <div class="flex flex-wrap justify-evenly gap-7">
+        {%for i in img%}
+        <div  class="flex relative" id="img1">
+            <img src="{{i.Images.url}}" alt="" style="width: 300px;" >
+            <div class="absolute top-0 items-center justify-center hidden text-center " id="wix" style="height: 100%; width: 100%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quibusdam.</div>
+        </div>
+        {%endfor%}
+    </div>
+</div>
+<div data-aos="fade-up" data-aos-duration="2000" class="flex flex-col items-center py-20 gap-16">
+    <div class="flex flex-col items-center gap-10">
+        <h1 class="text-lg sm:text-2xl md:text-4xl lg:text-6xl font-semibold text-slate-800 text-center">SIGN UP FOR SCHOOL NEWS</h1>
+        <h2 class="text-sm sm:text-base md:text-xl lg:text-3xl text-center">Stay-up-to-date with the latest news</h2>
+    </div>
+    <form action="" method="post">
+        <label for="" class="font-thin sm:text-lg  md:text-xl text-slate-500">Enter Your Email Here*</label>
+        <div class="flex" id="email">
+            <input type="email" required class="bg-indigo-500 " style="width: 500px; height: 50px;">
+            <button class="bg-slate-800 text-white px-10">Signup</button>
+        </div>
+    </form>
+</div>
+{%endblock%}

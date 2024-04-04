@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/css/includes/navbar.css">
+</head>
+<body>
+<div id="head" class=" bg-white z-50">
+    <header class=" flex justify-between px-10 py-5 items-center shadow-lg max-[640px]:flex-wrap max-[640px]:gap-5 max-[425px]:px-4 max-[320px]:py-3 max-[325px]:px-1 max-[300px]:gap-3">
+        <form action="" class="border-b-2 p-2 border-black flex  items-center gap-2 h-fit max-[640px]:order-1 max-[640px]:w-full">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search...">
+        </form>
+        <a href="/" class="flex items-start" id="logo">
+            <svg preserveAspectRatio="xMidYMid meet" data-bbox="33.106 20 133.787 160" viewBox="33.106 20 133.787 160" height="80" width="100" data-type="color" role="img" ><defs><style>#comp-k28xvhhi svg [data-color="1"] {fill: #1D1D36;}</style></defs>
+                <g>
+                    <path d="M35.048 40.007L100 20l64.953 20.007C172.675 105.531 158.607 146.083 100 180c-58.608-33.917-72.676-74.469-64.952-139.993zM100 170.395c20.377-12.36 38.74-27.999 48.97-50.057 10.603-22.86 10.884-49.272 8.362-74.032L100 28.647l-57.332 17.66c-2.522 24.76-2.242 51.172 8.362 74.032 10.231 22.057 28.592 37.696 48.97 50.056z" fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" data-color="1"></path>
+                    <path fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" d="M120.134 49.557l1.307 4.049 4.254-.008-3.446 2.494 1.322 4.044-3.438-2.508-3.437 2.508 1.322-4.044-3.447-2.494 4.255.008 1.308-4.049z" data-color="1"></path>
+                    <path fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" d="M81.18 49.557l1.307 4.049 4.255-.008-3.448 2.494 1.323 4.044-3.437-2.508-3.438 2.508 1.322-4.044-3.447-2.494 4.254.008 1.309-4.049z" data-color="1"></path>
+                    <path fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" d="M100.457 40.42l2.435 7.546 7.93-.016-6.425 4.649 2.465 7.537-6.406-4.674-6.407 4.674 2.465-7.537-6.424-4.649 7.93.016 2.437-7.546z" data-color="1"></path>
+                    <path d="M100 95.805c8.968-9.79 21.522-14.377 35.594-15.181l-2.277 39.859c-12.26 3.895-22.633 10.095-32.363 17.08l.035-.059-.753.567v.009l-.236.172-.235-.171v-.009l-.753-.567.036.059c-9.73-6.986-20.103-13.185-32.363-17.08l-2.278-39.859c14.071.803 26.625 5.39 35.593 15.18z" fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" data-color="1"></path>
+                    <path d="M100 90.921c2.418-9.254 6.105-17.514 18.053-20.637l3.773 2.559c-12.524 4.41-17.573 10.785-21.826 18.421-4.253-7.636-9.301-14.011-21.826-18.421l3.773-2.559C93.895 73.407 97.582 81.667 100 90.921z" fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" data-color="1"></path>
+                    <path d="M100.047 93.834c7.069-9.458 13.77-16.698 27.631-19.365l1.336 4.881c-13.586 1.614-21.613 7.773-28.967 14.484z" fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" data-color="1"></path>
+                    <path d="M99.953 93.834C92.6 87.123 84.572 80.964 70.986 79.35l1.335-4.881c13.862 2.667 20.563 9.907 27.632 19.365z" fill="#1D1D36" clip-rule="evenodd" fill-rule="evenodd" data-color="1"></path>
+                </g>
+            </svg>
+            
+            <div id="middle">
+                <h1 class="text-3xl font-extrabold max-[380px]:text-xl">Ridgeview</h1>
+                <h2 class="text-lg max-[380px]:text-sm" >Middle School</h2>
+            </div>
+        </a>
+        <div class="flex items-center justify-center gap-5">
+            <ul class="flex gap-2 text-2xl font-thin max-[770px]:hidden">
+                {%if user.id is not None%}
+                <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+                |
+                <li><a href="/logout">Logout</a></li>
+                {%else%}
+                <li><a href="/signup"><i class="fa-solid fa-circle-user"></i></a></li>
+                |
+                <li><a href="/login">Login</a></li>
+                {%endif%}
+            </ul>
+            <div class="text-xl gap-5 flex max-[900px]:hidden">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div onclick="f1()" class="p-2 border-2 border-black text-3xl rounded-md max-[900px]:flex hidden z-50">
+            <i class="fa-solid fa-chart-simple fa-rotate-90 opens" id="open"></i>
+            <i class="fa-solid fa-xmark closes text-white" id="close"></i>
+        </div>
+    </header>
+    <ul class="flex p-3 bg-slate-800 text-white gap-10 text-lg font-thin items-center justify-center z-40 hide" id="ul">
+        <ul class="hidden max-[770px]:flex gap-2 text-2xl font-thin absolute top-5 left-5">
+            {%if user.id is not None%}
+            <li><a href=""><i class="fa-solid fa-user"></i></a></li>
+            |
+            <li><a href="/logout">Logout</a></li>
+            {%else%}
+            <li><a href="/signup"><i class="fa-solid fa-circle-user"></i></a></li>
+            |
+            <li><a href="/login">Login</a></li>
+            {%endif%}
+        </ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/academics">Academics</a></li>
+        <li><a href="/news">News</a></li>
+        <li><a href="/events">Events</a></li>
+        <li><a href="/students">Students</a></li>
+        <li><a href="/parents">Parents</a></li>
+        <li><a href="/admissions">Admissions</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <div class="text-xl gap-5 hidden max-[900px]:flex absolute bottom-5 left-5">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+    </ul>
+</div>
+</body>
+</html>
+<script>
+    let e = document.getElementById('head');
+    let opens=document.getElementById('open')
+    let closes=document.getElementById('close')
+    window.addEventListener('wheel', function (event) {
+    if (event.deltaY < 0) {
+        e.classList.add('stickey');
+    }
+
+    else if (event.deltaY > 0) {
+        e.classList.remove('stickey');
+    }
+    });
+    var ul=document.getElementById('ul')
+    function f1() {
+        if(ul.classList.contains('hide')){
+            ul.classList.remove('hide')
+            ul.classList.add('show')
+            opens.classList.remove('openes')
+            opens.classList.add('closes')
+            closes.classList.remove('closes')
+            closes.classList.add('opens')
+        }
+        else if(ul.classList.contains('show')){
+            ul.classList.remove('show')
+            ul.classList.add('hide')
+            closes.classList.remove('opens')
+            closes.classList.add('closes')
+            opens.classList.remove('closes')
+            opens.classList.add('opens')
+        }
+    }
+</script>

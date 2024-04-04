@@ -1,0 +1,37 @@
+.stickey{
+    position: sticky !important;
+    top: 0px;
+    transition: all 0.1s ease;
+}
+@media screen and (max-width:900px) {
+    #ul{
+        position: fixed;
+        top: 0%;
+        height: 100vh;
+        width: 90%;
+        flex-direction: column;
+        right: 0%;
+        gap: 20px !important;
+    }
+    #head{
+        position: relative;
+    }
+    .hide{
+        transform: translateX(200%);
+        transition: all 0.5s ease-out ;
+    }
+    
+    .show{
+        transform: translateX(0%);
+        transition: all 0.5s ease-in-out ;
+    }
+    .opens{
+        display: flex !important;
+        transition: all 0.5s ease-in-out ;
+        
+    }
+    .closes{
+        display: none !important;
+        transition: all 0.5s ease-in-out ;
+    }
+}

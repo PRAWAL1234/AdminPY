@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block 'title'%}{%endblock%}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/bb21a6796a.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+         input:focus{
+            outline: 0px;
+        }
+    </style>
+    {%block 'css'%}
+    {%endblock%}
+</head>
+<body>
+    {%include './includes/navbar.html'%}
+    {%block 'html'%}
+    {%endblock%}
+    {%include './includes/footer.html'%}
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+</html>

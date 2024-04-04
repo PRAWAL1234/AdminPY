@@ -1,0 +1,5 @@
+from django.db import models
+
+# Create your models here.
+class Img(models.Model):
+    Images=models.ImageField(upload_to='home')
